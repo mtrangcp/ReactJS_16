@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn-group {
+  background-color: rgb(78, 78, 78);
+  width: fit-content;
+  margin: 30px;
+  padding: 10px;
+
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.primary,
+.secondary,
+.success,
+.danger,
+.dark {
+  color: white;
+}
+
+.warning,
+.info,
+.light {
+  color: black;
+}
+
+.primary {
+  background-color: blue;
+}
+
+.secondary {
+  background-color: gray;
+}
+
+.success {
+  background-color: green;
+}
+.warning {
+  background-color: rgb(236, 167, 39);
+}
+
+.danger {
+  background-color: red;
+}
+
+.info {
+  background-color: rgb(0, 225, 225);
+}
+
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: black;
+}
