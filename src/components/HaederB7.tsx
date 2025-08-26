@@ -1,7 +1,22 @@
 import { Component } from "react";
 import "../styles/Bai07.css";
+import CartB7 from "./CartB7";
 
-export default class HaederB7 extends Component {
+type StateType = {
+  openCart: boolean;
+};
+
+export default class HaederB7 extends Component<object, StateType> {
+  constructor(props: object) {
+    super(props);
+    this.state = {
+      openCart: false,
+    };
+  }
+  handleClickIconCart = () => {
+    this.setState({ openCart: !this.state.openCart });
+  };
+
   render() {
     return (
       <div className="header">
@@ -10,9 +25,15 @@ export default class HaederB7 extends Component {
           <a href="#">Danh sach san pham</a>
         </div>
         <div className="header-right">
-          <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="" />
-          <span>3{}</span>
+          <img
+            onClick={this.handleClickIconCart}
+            src="https://pngimg.com/d/shopping_cart_PNG4.png"
+            alt=""
+          />
+          <span>{3}</span>
         </div>
+
+        {this.state.openCart && <CartB7></CartB7>}
       </div>
     );
   }

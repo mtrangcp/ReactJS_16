@@ -4,6 +4,7 @@ function App() {
   return (
     <>
       <Bai07 />
+      {/* <CartB7 /> */}
     </>
   );
 }
